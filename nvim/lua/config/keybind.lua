@@ -11,17 +11,8 @@ vim.keymap.set("n", "<space>fe", function()
 end)
 
 -- neo-tree
-vim.keymap.set('n', '<leader>e', ':Neotree toggle right<CR>')
+vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle right<CR>')
 
 -- toggleterm & lazygit
-local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({
-    cmd = "lazygit",
-    direction = "float",
-    hidden = true
-})
-
-function Lazygit_toggle()
-    lazygit:toggle()
-end
-vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua Lazygit_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>LazyGit<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>ToggleTerm direction=float<CR>", { noremap = true, silent = true })
