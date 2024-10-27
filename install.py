@@ -2,48 +2,51 @@ import os
 import shutil
 import getpass
 
-user_dir = {
-        'nt': "C:/Users/" + getpass.getuser(),
-        'posix': "~"
-        }
+user_dir = {"nt": "C:/Users/" + getpass.getuser(), "posix": "~"}
 
 files = {
-        'wezterm': '.wezterm.lua',
-        'lazygit': {
-            'nt': 'Appdata/Local/lazygit',
-            'posix': '.config/lazygit',
-            },
-        'nvim': {
-            'nt': 'Appdata/Local/nvim',
-            'posix': '.config/nvim'
-            }
-        }
+    "glazewm": ".glzr",
+    "wezterm": ".wezterm.lua",
+    "lazygit": {
+        "nt": "Appdata/Local/lazygit",
+        "posix": ".config/lazygit",
+    },
+    "nvim": {"nt": "Appdata/Local/nvim", "posix": ".config/nvim"},
+}
 
-def checkWezExists(os_name):
-    destpath = os.path.join(user_dir[os_name], files['wezterm'])
-    if os.path.exists(destpath):
+
+def removeOldTarget(destpath: str, isDir: bool):
+    if isDir == True:
+        shutil.rmtree(destpath)
+    else:
         os.remove(destpath)
-        shutil.copy('.wezterm.lua', os.path.join(user_dir[os_name], files['wezterm']))
 
 
-def checkNvimExists(os_name):
-    destpath = os.path.join(user_dir[os_name], files['nvim'][os_name])
-    if os.path.exists(destpath):
-        shutil.rmtree(destpath)
-        shutil.copytree('nvim', os.path.join(user_dir[os_name], files['nvim'][os_name]))
+def installer(targetName: str, isOsSpecifiedPath: bool, isDir: bool):
+    os_name = os.name
+    file = files[targetName]
+    if isOsSpecifiedPath == True:
+        file = targetName
+        destpath = os.path.join(user_dir[os_name], files[targetName][os_name])
+    else:
+        destpath = os.path.join(user_dir[os_name], files[targetName])
 
-def checkLazyGitExists(os_name):
-    destpath = os.path.join(user_dir[os_name], files['lazygit'][os_name])
-    if os.path.exists(destpath):
-        shutil.rmtree(destpath)
-        shutil.copytree('lazygit', os.path.join(user_dir[os_name], files['lazygit'][os_name]))
-
-def install(os_name):
-    checkWezExists(os_name)
-    checkNvimExists(os_name)
-    checkLazyGitExists(os_name)
-    print('installation finished')
+    print("installing", targetName, "configuration files...")
+    if os.path.exists(destpath) == True:
+        removeOldTarget(destpath, isDir)
+    if isDir == True:
+        shutil.copytree(file, destpath)
+    else:
+        shutil.copy(file, destpath)
 
 
-print("installation starts.")
-install(os.name)
+def main():
+    print("installation starts.")
+    installer("glazewm", False, True)
+    installer("wezterm", False, False)
+    installer("nvim", True, True)
+    installer("lazygit", True, True)
+    print("installation finished")
+
+
+main()
