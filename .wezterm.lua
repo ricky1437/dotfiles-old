@@ -1,11 +1,11 @@
 local wezterm = require("wezterm")
 
-local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_left_half_circle_thick 
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_right_half_circle_thick
-
 local config = {
     -- default shell
     default_prog = { "powershell.exe", "-NoLogo" },
+
+    -- default cwd
+    default_cwd = "D:/Project",
 
     -- detect changes on config file
     automatically_reload_config = true,
@@ -88,6 +88,8 @@ wezterm.on('format-window-title', function(tab)
 end)
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+    local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_left_half_circle_thick
+    local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_right_half_circle_thick
     local background = "#606060"
     local foreground = "#cbcbcb"
     local edge_background = 'none'
