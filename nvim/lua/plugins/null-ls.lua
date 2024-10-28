@@ -8,6 +8,7 @@ return {
                     null_ls.builtins.formatting.black,
                     null_ls.builtins.formatting.prettier.with({
                         filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+                        prefer_local = "node_modules/.bin",
                     }),
                 },
                 on_attach = function(client, bufnr)
