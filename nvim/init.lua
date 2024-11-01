@@ -21,6 +21,7 @@ end
 require("config.vim-option")
 require("config.lazy")
 require("config.lsp")
+require("config.bufferline")
 require("config.keybind")
 
 vim.cmd[[colorscheme onedark]]

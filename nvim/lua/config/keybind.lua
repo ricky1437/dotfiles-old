@@ -16,3 +16,8 @@ vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle right<CR>')
 -- toggleterm & lazygit
 vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>LazyGit<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>ToggleTerm direction=float<CR>", { noremap = true, silent = true })
+
+-- diagnostic hover
+vim.keymap.set("n", "<leader>sd", function()
+    vim.diagnostic.open_float()
+end)
