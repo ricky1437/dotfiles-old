@@ -31,7 +31,7 @@ local config = {
     -- inactive pane
     inactive_pane_hsb = {
       saturation = 0.7,
-      brightness = 0.9,
+      brightness = 0.5,
     },
 
     -- tab bar settings
