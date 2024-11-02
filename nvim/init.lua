@@ -24,4 +24,4 @@ require("config.lsp")
 require("config.bufferline")
 require("config.keybind")
 
-vim.cmd[[colorscheme onedark]]
+vim.cmd[[colorscheme base16-gruvbox-dark-hard]]

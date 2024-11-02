@@ -13,9 +13,15 @@ local config = {
     -- use IME
     use_ime = true,
 
+    -- font settings
+    font = wezterm.font(
+        'FiraCode Nerd Font' , { weight = 'DemiBold'}
+    ),
+    font_size = 13,
+
     -- window appearance
     window_frame = {
-        font = wezterm.font ("Hack Nerd Font", { weight='Bold' }),
+        font = wezterm.font ("FiraCode Nerd Font", { weight='Bold' }),
         font_size = 11
     },
     window_padding = {
@@ -41,14 +47,10 @@ local config = {
     show_new_tab_button_in_tab_bar = false,
     -- show_close_tab_button_in_tabs = false,
 
-    -- font settings
-    font = wezterm.font(
-        'Hack Nerd Font'
-    ),
-    font_size = 13,
-
     -- colorscheme
-    color_scheme = 'OneDark (base16)',
+    -- color_scheme = 'OneDark (base16)',
+    -- color_scheme = 'base16-black-metal-bathory',
+    color_scheme = 'Gruvbox dark, hard (base16)',
 
     -- color style
     colors = {
