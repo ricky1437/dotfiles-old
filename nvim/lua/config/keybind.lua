@@ -10,6 +10,9 @@ vim.keymap.set("n", "<space>fe", function()
 	require("telescope").extensions.file_browser.file_browser()
 end)
 
+-- Telescope frecency
+vim.keymap.set('n', '<leader>fr', "<cmd>Telescope frecency<CR>")
+
 -- neo-tree
 vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle right<CR>')
 
