@@ -15,9 +15,10 @@ local config = {
 
     -- font settings
     font = wezterm.font(
-        'FiraCode Nerd Font' , { weight = 'DemiBold'}
+        'Terminus (TTF)'
+        -- 'FiraCode Nerd Font', {weight='Regular'}
     ),
-    font_size = 13,
+    font_size = 11,
 
     -- window appearance
     window_frame = {
@@ -30,7 +31,7 @@ local config = {
         top = 0,
         bottom = 0,
     },
-    window_decorations = "RESIZE",
+    -- window_decorations = "RESIZE",
     window_background_opacity = 1,
     text_background_opacity = 1,
 
@@ -43,14 +44,16 @@ local config = {
     -- tab bar settings
     hide_tab_bar_if_only_one_tab = false,
     use_fancy_tab_bar = true,
-    tab_bar_at_bottom = true,
+    -- tab_bar_at_bottom = true,
     show_new_tab_button_in_tab_bar = false,
     -- show_close_tab_button_in_tabs = false,
 
     -- colorscheme
     -- color_scheme = 'OneDark (base16)',
     -- color_scheme = 'base16-black-metal-bathory',
-    color_scheme = 'Gruvbox dark, hard (base16)',
+    -- color_scheme = 'Gruvbox dark, hard (base16)',
+    -- color_scheme = 'Darcula (base16)',
+    color_scheme = 'Red Phoenix (terminal.sexy)',
 
     -- color style
     colors = {

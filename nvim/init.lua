@@ -24,4 +24,6 @@ require("config.lsp")
 require("config.bufferline")
 require("config.keybind")
 
-vim.cmd[[colorscheme base16-gruvbox-dark-hard]]
+-- vim.cmd[[set background=light]]
+vim.cmd.colorscheme("phoenix")
+vim.cmd[[PhoenixRed]]
