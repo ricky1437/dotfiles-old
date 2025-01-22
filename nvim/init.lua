@@ -25,5 +25,5 @@ require("config.bufferline")
 require("config.keybind")
 
 -- vim.cmd[[set background=light]]
-vim.cmd.colorscheme("phoenix")
-vim.cmd[[PhoenixRed]]
+-- vim.cmd.colorscheme("base16-black-metal-bathory")
+-- vim.cmd[[PhoenixRed]]

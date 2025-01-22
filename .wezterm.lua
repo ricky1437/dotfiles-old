@@ -15,15 +15,16 @@ local config = {
 
     -- font settings
     font = wezterm.font(
-        'Terminus (TTF)'
-        -- 'FiraCode Nerd Font', {weight='Regular'}
+        -- 'Terminus (TTF)'
+        -- 'FiraCode Nerd Font' --, {weight='DemiBold'}
+        'RobotoMono Nerd Font', {weight='DemiBold'}
     ),
-    font_size = 11,
+    font_size = 14,
 
     -- window appearance
     window_frame = {
-        font = wezterm.font ("FiraCode Nerd Font", { weight='Bold' }),
-        font_size = 11
+        font = wezterm.font ("FiraCode Nerd Font"),
+        font_size = 12
     },
     window_padding = {
         left = 0,
@@ -53,7 +54,7 @@ local config = {
     -- color_scheme = 'base16-black-metal-bathory',
     -- color_scheme = 'Gruvbox dark, hard (base16)',
     -- color_scheme = 'Darcula (base16)',
-    color_scheme = 'Red Phoenix (terminal.sexy)',
+    -- color_scheme = 'Red Phoenix (terminal.sexy)',
 
     -- color style
     colors = {
