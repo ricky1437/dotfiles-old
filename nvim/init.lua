@@ -21,9 +21,10 @@ end
 require("config.vim-option")
 require("config.lazy")
 require("config.lsp")
-require("config.bufferline")
+-- require("config.bufferline")
 require("config.keybind")
 
+vim.cmd("language en_US")
 -- vim.cmd[[set background=light]]
--- vim.cmd.colorscheme("base16-black-metal-bathory")
--- vim.cmd[[PhoenixRed]]
+-- vim.cmd.colorscheme("myowncolorscheme")
+vim.cmd("colorscheme mycolorscheme")

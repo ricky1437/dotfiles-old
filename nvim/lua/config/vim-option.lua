@@ -7,6 +7,7 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.ignorecase = true
 opt.smartcase = true
+opt.swapfile = false
 opt.wrap = true
 opt.spell = true
 opt.title = true
