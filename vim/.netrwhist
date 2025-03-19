@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/ricky/.config/vim/ftdetect'
+let g:netrw_dirhist_9='/home/ricky/.config/vim'
+let g:netrw_dirhist_8='/home/ricky/.config/vim/syntax'
+let g:netrw_dirhist_7='/home/ricky/.config/vim'
+let g:netrw_dirhist_6='/home/ricky/.config/vim/syntax'
+let g:netrw_dirhist_5='/home/ricky/.vim/colors'
+let g:netrw_dirhist_4='/home/ricky/.vim'
+let g:netrw_dirhist_3='/home/ricky/Documents/smw/segment/src'
+let g:netrw_dirhist_2='/home/ricky/Documents/smw/segment'
+let g:netrw_dirhist_1='/home/ricky/Documents/syntax'
